@@ -1,0 +1,9 @@
+﻿fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+faiss-cpu
+sentence-transformers
+numpy
+PyPDF2
+httpx

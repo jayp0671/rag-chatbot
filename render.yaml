@@ -1,0 +1,24 @@
+﻿services:
+  - type: web
+    name: rag-chatbot-api
+    env: python
+    rootDir: apps/api
+    buildCommand: pip install -r apps/api/requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port \
+    autoDeploy: true
+    envVars:
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
+      - key: INDEX_DIR
+        value: /opt/render/project/src/data/index
+      - key: EMBED_PROVIDER
+        value: hf_api
+      - key: MODEL_EMBED
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: LLM_PROVIDER
+        value: hf
+      - key: MODEL_LLM
+        value: mistralai/Mistral-7B-Instruct
+      # set this one in Render UI as a SECRET
+      - key: HF_TOKEN
+        sync: false

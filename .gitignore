@@ -1,0 +1,28 @@
+﻿# python
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.local
+apps/api/.env
+
+# node / vite
+apps/web/node_modules/
+apps/web/dist/
+apps/web/.env*
+npm-debug.log*
+
+# data & indexes (runtime artifacts)
+data/
+!data/.gitkeep
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.git_backup*/
+
